@@ -7,7 +7,9 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
-import TextRating2 from './TextRating'
+import {TextRating2} from './TextRating'
+
+//리뷰
 
 export default function AlignItemsList() {
     return (
@@ -20,6 +22,7 @@ export default function AlignItemsList() {
             primary="username"
             secondary={
               <React.Fragment>
+                
                 <Typography
                   sx={{ display: 'inline' }}
                   component="span"
@@ -28,11 +31,14 @@ export default function AlignItemsList() {
                 >
                 <TextRating2></TextRating2>
                 </Typography>
+                
                 {"text"}
-                <CardMedia 
-              sx={{ml:5, height: 400,width:200 }}
-              image="https://cdn.snapfit.co.kr/review/contents/stores/questlife/20221030/medium_9e0a2b8226a8c47d432c2d0ef867895c.jpg"
-              //title=
+
+              <CardMedia 
+                sx={{ml:5, height: 300,width:300 }}
+                //사진 
+                image="https://cdn.snapfit.co.kr/review/contents/stores/questlife/20221030/medium_9e0a2b8226a8c47d432c2d0ef867895c.jpg"
+                //title=
               />
               </React.Fragment>
             }

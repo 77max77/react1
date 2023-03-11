@@ -7,7 +7,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import TextRating from './TextRating'
+import {TextRating} from './TextRating'
 import GutterlessList from './Rank'
 import BasicList from './CostRank'
 import OutlinedButtons from './Button'

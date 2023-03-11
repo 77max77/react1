@@ -16,7 +16,8 @@ const labels = {
     5: 'Excellent+',
   };
   
-  export default function TextRating() {
+  export function TextRating() {
+    //점수
     const value = 4;
   
     return (
@@ -41,6 +42,7 @@ const labels = {
   
   
   export function TextRating2() {
+    //점수
     const value = 3;
   
     return (
