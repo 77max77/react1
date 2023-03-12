@@ -7,7 +7,6 @@ import ThirdCard from './ThirdCard'
 import SecondCard from './SecondCard'
 import FirstCard from './FirstCard'
 import AlignItemsList from './ReviewList'
-import BasicPagination from './Pagination'
 import ForthCard from './ForthCard'
 export default function App() {
   return (
@@ -39,19 +38,8 @@ export default function App() {
         <Typography fixed sx={{mt:10,mb:5,fontSize:25}}  variant="h3">
           제품 리뷰
         </Typography>
-
         <AlignItemsList></AlignItemsList>  
-
-        
       </Container>
-      <Container fixed  sx={{
-          width: 390,
-          display: 'flex',
-          alignItems: 'center',
-        }}>
-      <BasicPagination ></BasicPagination>  
-      </Container>
-      
     </div>
   );
 }
