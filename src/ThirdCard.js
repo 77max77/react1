@@ -15,7 +15,8 @@ export default function ThirdCard() {
           
           <Grid container>  
             <Grid item xs>
-              <Typography  variant="h3" component="div" sx={{ml:3,mt:3,fontSize: 20  }} startIcon={<Brightness5Icon/>} gutterBottom>
+              <Typography  variant="h3" component="div" sx={{ml:3,mt:3,fontSize: 20  }}  gutterBottom>
+              <Brightness5Icon sx={{mr:2}}></Brightness5Icon>
                 아침, 식후
               </Typography>
             </Grid>
@@ -29,7 +30,8 @@ export default function ThirdCard() {
             
           <Grid container>
             <Grid item xs>
-              <Typography  variant="h3" component="div" sx={{ml:3,mt:3,fontSize: 20 }} startIcon={<NightlightIcon/>}  gutterBottom>
+              <Typography  variant="h3" component="div" sx={{ml:3,mt:3,fontSize: 20 }}   gutterBottom>
+              <NightlightIcon sx={{mr:2}}></NightlightIcon>
                 저녁, 식후
               </Typography>
             </Grid>

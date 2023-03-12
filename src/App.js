@@ -8,7 +8,7 @@ import SecondCard from './SecondCard'
 import FirstCard from './FirstCard'
 import AlignItemsList from './ReviewList'
 import BasicPagination from './Pagination'
-import Box from '@mui/material/Box';
+import ForthCard from './ForthCard'
 export default function App() {
   return (
     <div>
@@ -32,10 +32,16 @@ export default function App() {
         <ThirdCard></ThirdCard>
 
         <Typography fixed sx={{mt:10,mb:5,fontSize:25}}  variant="h3">
+          Q&A
+        </Typography>
+        <ForthCard></ForthCard>
+
+        <Typography fixed sx={{mt:10,mb:5,fontSize:25}}  variant="h3">
           제품 리뷰
         </Typography>
 
         <AlignItemsList></AlignItemsList>  
+
         
       </Container>
       <Container fixed  sx={{
