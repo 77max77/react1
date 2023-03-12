@@ -8,6 +8,10 @@ import SecondCard from './SecondCard'
 import FirstCard from './FirstCard'
 import AlignItemsList from './ReviewList'
 import ForthCard from './ForthCard'
+/*
+const company=""
+const productname=""
+*/
 export default function App() {
   return (
     <div>
