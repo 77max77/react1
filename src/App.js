@@ -7,6 +7,8 @@ import ThirdCard from './ThirdCard'
 import SecondCard from './SecondCard'
 import FirstCard from './FirstCard'
 import AlignItemsList from './ReviewList'
+import BasicPagination from './Pagination'
+import Box from '@mui/material/Box';
 export default function App() {
   return (
     <div>
@@ -33,8 +35,17 @@ export default function App() {
           제품 리뷰
         </Typography>
 
-        <AlignItemsList></AlignItemsList>
+        <AlignItemsList></AlignItemsList>  
+        
       </Container>
+      <Container fixed  sx={{
+          width: 390,
+          display: 'flex',
+          alignItems: 'center',
+        }}>
+      <BasicPagination ></BasicPagination>  
+      </Container>
+      
     </div>
   );
 }
