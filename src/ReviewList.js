@@ -8,6 +8,8 @@ import Divider from '@mui/material/Divider';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import {TextRating2} from './TextRating'
+import BasicPagination from './Pagination'
+import Container from '@mui/material/Container';
 
 //리뷰
 
@@ -45,6 +47,13 @@ export default function AlignItemsList() {
           />
         </ListItem>
         <Divider variant="inset" component="li" />
+        <Container fixed  sx={{
+          width: 390,
+          display: 'flex',
+          alignItems: 'center',
+        }}>
+      <BasicPagination ></BasicPagination>  
+      </Container>
       </List>
     );
   }
