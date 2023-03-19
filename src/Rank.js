@@ -14,7 +14,7 @@ export default function GutterlessList() {
       </Grid>
       <Grid item >
         <List sx={{ width: '100%', maxWidth: 360}}>
-          {[1, 2, 3].map((value) => (
+          {[1, 1, 1].map((value) => (
             <ListItem
               key={value}
               disableGutters

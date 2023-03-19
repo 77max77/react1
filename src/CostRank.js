@@ -6,14 +6,7 @@ import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
-/*
-var text1=""
-var text2=""
-var text3=""
-var price1=""
-var price2=""
-var price3=""
-*/
+
 export default function BasicList() {
     return (
       <Box sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>

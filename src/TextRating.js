@@ -18,32 +18,7 @@ const labels = {
   
   export function TextRating() {
     //점수
-    const value = 4;
-  
-    return (
-      <Box
-        sx={{
-          width: 200,
-          display: 'flex',
-          alignItems: 'center',
-        }}
-      >
-        <Rating
-          name="text-feedback"
-          value={value}
-          readOnly
-          precision={0.5}
-          emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-        />
-        <Box sx={{ ml: 2 }}>{labels[value]}</Box>
-      </Box>
-    );
-  }
-  
-  
-  export function TextRating2() {
-    //점수
-    const value = 3;
+    const value = {prodct.score};
   
     return (
       <Box

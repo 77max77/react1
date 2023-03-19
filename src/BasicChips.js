@@ -9,7 +9,6 @@ export function BasicChips() {
     return (
       <Stack sx={{ml:3}}direction="row" spacing={1}>
         <Chip label="text"  variant="outlined"/>
-        <Chip label="text" variant="outlined" />
       </Stack>
     );
   }
