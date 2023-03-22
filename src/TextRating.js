@@ -18,8 +18,8 @@ const labels = {
   
   export function TextRating() {
     //점수
-    const value = {prodct.score};
-  
+    //const value = {prodct.score};
+    const value = 3
     return (
       <Box
         sx={{

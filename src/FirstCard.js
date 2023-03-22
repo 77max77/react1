@@ -8,8 +8,8 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import {TextRating} from './TextRating'
-import GutterlessList from './Rank'
-import BasicList from './CostRank'
+//import GutterlessList from './Rank'
+//import BasicList from './CostRank'
 import OutlinedButtons from './Button'
 
 export default function FirstCard() {
@@ -48,7 +48,7 @@ export default function FirstCard() {
                 <Link color="#7e57c2">리뷰</Link>
                 </Grid>
               </Grid>
-              < GutterlessList></ GutterlessList>
+ 
             </CardContent>
           </Grid>
           </Card>
@@ -56,7 +56,6 @@ export default function FirstCard() {
               <Typography  variant="h3" component="div" sx={{ml:0,mr:5,mt:10,fontSize:30 }}   gutterBottom>
               최저가
               </Typography>
-              < BasicList></BasicList>
               </Grid>
               <Grid item sx={{mt:0}}>
               <Link variant="h3" component="div" sx={{ml:0,mr:5,mt:10,fontSize:30 }}   gutterBottom>xxxx원</Link>

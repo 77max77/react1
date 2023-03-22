@@ -7,9 +7,7 @@ import Container from '@mui/material/Container';
 export default function AlignItemsList() {
     return (
       <Card sx={{ bgcolor: '#fafafa', color: 'background.paper', p: 2 }}>
-          {reviews.map(review) => {
-            return <ReviewCard key={`key-${review.q}`} review={review} />;
-          })}
+          <ReviewCard/>
           <Container fixed  sx={{
             width: 390,
             display: 'flex',

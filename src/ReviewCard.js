@@ -32,7 +32,7 @@ export default function ReviewCard() {
               <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
             </ListItemAvatar>
             <ListItemText
-              primary={review.username}
+              primary={"sdfdsf"}
               secondary={
                 <React.Fragment>
                   
@@ -47,8 +47,8 @@ export default function ReviewCard() {
                 <CardMedia 
                   sx={{ height: 300,width:300 }} 
                   //사진 
-                  image={review.img}
-                  text={review.text}
+                  image={"sdfsdf"}
+                  text={"review.text"}
                 />
                 </React.Fragment>
               }
@@ -60,8 +60,8 @@ export default function ReviewCard() {
 
   function TextRating2() {
     //점수
-    let value = {review.score};
-  
+    //let value = {review.score};
+    let value =3 
     return (
       <Box
         sx={{

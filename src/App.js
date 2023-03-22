@@ -1,15 +1,16 @@
 import "./style.css";
-import {BrowserRouter,Route,Routes} from "react-router-dom"
-import {useState} from "react"
+//import {BrowserRouter,Route,Routes} from "react-router-dom"
+//import {useState} from "react"
 import ProductDetail from './ProductDetailPage'
-import axios from "axios"
+//import axios from "axios"
 export default function App() {
-  
+  /*
   const [products,setProducts] =useState([]);
   const [loading, setLoading] = useState(false);
   const accessToken=sessionStorage.getItem("accessToken")
   const [ res, setres ]= useState(false)
-
+  */
+  /*
   useEffect(() => {
     const fetchData = async () => {
       setLoading(false);
@@ -22,13 +23,14 @@ export default function App() {
       setres(response.data)
       setLoading(true);
     };
+  */
   return (
-    <BrowserRouter>
-      <TopNavigattionBar/>
-      <Routes>
-        <Route path="/" element={<ProductDetail products={products}setProducts={products}/>}/>
+    //<BrowserRouter>
+      //<TopNavigattionBar/>
+      //<Routes>
+        //<Route path="/" element={<ProductDetail products={products}setProducts={products}/>}
         <ProductDetail></ProductDetail>
-      </Routes>
-    </BrowserRouter>
+      //</Routes>
+    //</BrowserRouter>
   );
 }

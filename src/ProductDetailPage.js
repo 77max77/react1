@@ -7,7 +7,8 @@ import ThirdCard from './ThirdCard'
 import SecondCard from './SecondCard'
 import FirstCard from './FirstCard'
 import AlignItemsList from './ReviewList'
-import ForthCard from './ForthCard'
+//import ForthCard from './ForthCard'
+import FifthCard from './FifthCard'
 
 export default function ProductDetail() {
   return (
@@ -31,15 +32,16 @@ export default function ProductDetail() {
 
         <ThirdCard></ThirdCard>
 
-        <Typography fixed sx={{mt:10,mb:5,fontSize:25}}  variant="h3">
-          Q&A
-        </Typography>
-        <ForthCard></ForthCard>
+       
 
         <Typography fixed sx={{mt:10,mb:5,fontSize:25}}  variant="h3">
           제품 리뷰
         </Typography>
-        <AlignItemsList></AlignItemsList>  
+        <AlignItemsList></AlignItemsList> 
+        <Typography fixed sx={{mt:10,mb:5,fontSize:25}}  variant="h3">
+          리뷰 작성
+        </Typography>
+        <FifthCard/>
       </Container>
     </div>
   );
