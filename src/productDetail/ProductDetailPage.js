@@ -1,4 +1,4 @@
-import "./style.css";
+import "/main/school/react-project/react1/src/style.css";
 import Container from '@mui/material/Container';
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
@@ -9,6 +9,7 @@ import FirstCard from './FirstCard'
 import AlignItemsList from './ReviewList'
 //import ForthCard from './ForthCard'
 import FifthCard from './FifthCard'
+import SixCard from "./SixCard";
 
 export default function ProductDetail() {
   return (
@@ -42,6 +43,7 @@ export default function ProductDetail() {
           리뷰 작성
         </Typography>
         <FifthCard/>
+        <SixCard></SixCard>
       </Container>
     </div>
   );

@@ -1,7 +1,7 @@
 import "./style.css";
 //import {BrowserRouter,Route,Routes} from "react-router-dom"
 //import {useState} from "react"
-import ProductDetail from './ProductDetailPage'
+import ProductDetail from './productDetail/ProductDetailPage'
 //import axios from "axios"
 export default function App() {
   /*
