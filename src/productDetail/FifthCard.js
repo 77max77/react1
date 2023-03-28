@@ -8,7 +8,7 @@ export default function FifthCard() {
     return (
       <Card sx={{ minWidth: 275, mb:5 }}>
         <Container fixed  sx={{
-            width: 500,
+            width: 800,
             display: 'flex',
             alignItems: 'center',mb:2,mt:2
           }}>

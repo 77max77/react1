@@ -4,11 +4,13 @@ import Container from '@mui/material/Container';
 
 export default function SixCard() {
   return (
-    <Card sx={{ minWidth: 300, mb:5 }}>
+    <Card sx={{ minWidth: 1000, mb:2 }}>
         <Container fixed  sx={{
-            width: 700,
+            width: '100%',
             display: 'flex',
-            alignItems: 'center',mb:2,mt:2
+            alignItems: 'center',
+            justifyContent: 'center',
+            mt:2
           }}>
       <Chart />
       </Container>

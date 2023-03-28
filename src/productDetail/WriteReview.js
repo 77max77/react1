@@ -37,17 +37,10 @@ export default function FifthCard() {
         React.createElement(TextField, {
           label: 'Title',
           variant: 'outlined',
+          
           value: title,
           onChange: (event) => setTitle(event.target.value),
-        }),
-        React.createElement(TextField, {
-          label: 'Review',
-          variant: 'outlined',
-          multiline: true,
-          rows: 4,
-          value: review,
-          onChange: (event) => setReview(event.target.value),
-        }),
+        }), 
         React.createElement(Box, { component: 'fieldset', borderColor: 'transparent' },
           React.createElement(Typography, { component: 'legend' }, '별점:'),
           React.createElement(Rating, {
@@ -56,7 +49,16 @@ export default function FifthCard() {
             onChange: (event, newValue) => setRating(newValue),
           })
         ),
-        React.createElement(Button, { variant: 'contained', color: 'primary', type: 'submit',}, 'Submit')
+        React.createElement(TextField, {
+          label: 'Review',
+          variant: 'outlined',
+          multiline: true,
+       
+          rows: 4,
+          value: review,
+          onChange: (event) => setReview(event.target.value), style: { width: 800 },
+        }),
+        React.createElement(Button, { variant: 'contained', color: 'primary', type: 'submit',style: { width: 300, height: 50 } }, 'Submit')
     )
   );
 }
