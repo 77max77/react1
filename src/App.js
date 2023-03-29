@@ -24,6 +24,31 @@ export default function App() {
       setLoading(true);
     };
   */
+   /*import { useState } from 'react';
+
+function ProductForm() {
+  const [image, setImage] = useState('');
+  const [name, setName] = useState('');
+  const [price, setPrice] = useState(0);
+  const [rating, setRating] = useState(0);
+  const [manufacturer, setManufacturer] = useState('');
+  const [ingredients, setIngredients] = useState('');
+  const [reviews, setReviews] = useState('');
+  const [effects, setEffects] = useState('');
+  const [usageMethods, setUsageMethods] = useState('');
+
+  // handle form submission here
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // ...
+  };
+
+  return (
+    // form elements go here
+  );
+}
+    */
+
   return (
     //<BrowserRouter>
       //<TopNavigattionBar/>
