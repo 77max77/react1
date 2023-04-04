@@ -12,6 +12,7 @@ import FifthCard from './FifthCard'
 import SixCard from "./SixCard";
 
 export default function ProductDetail() {
+  
   return (
     <div>
       <Container fixed sx={{mt:5}}>
@@ -20,11 +21,11 @@ export default function ProductDetail() {
         <Link fixed size="large"  color="#78909c">product name</Link>
         <FirstCard></FirstCard>
         <Typography fixed sx={{mt:10,mb:5,fontSize:25}}  variant="h3">
-          이 제품의 효과 
+          제품 효과 
         </Typography>
         <SecondCard></SecondCard>
         <Typography fixed sx={{mt:10,mb:5,fontSize:25}}  variant="h3">
-          추천 섭취 시간 및 복용법
+          복용법
         </Typography>
         <ThirdCard></ThirdCard>
         <Typography fixed sx={{mt:10,mb:5,fontSize:25}}  variant="h3">

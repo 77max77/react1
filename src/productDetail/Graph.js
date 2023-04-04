@@ -1,57 +1,71 @@
-import React, { useState, useEffect } from 'react';
-
-const Chart = () => {
-  const [filledSize, setFilledSize] = useState(500);
+import React, { useEffect } from 'react';
+import Typography from '@mui/material/Typography';
+const Chart = (props) => {
   const maxBarSize = 500;
   const sectionSize = maxBarSize / 3;
   
   function barColor(value) {
     if (value > 500) {
-      return 'blue';
+      return '#33adff';
     } else if (value < 500) {
-      return 'red';
+      return '#ff1a1a';
     } else {
-      return 'green';
+      return '#29a329';
     }
   }
 
   useEffect(() => {
     window.addEventListener('load', () => {
-      setFilledSize(maxBarSize);
+      props.setFilledSize(maxBarSize);
     });
   }, []);
-  const pname = "비타민C"
+  
   return (
-    <>
-      {pname}
-      <div style=
-      {{ width: maxBarSize + 'px', 
-      height: '30px', 
-      border: '2px solid black', 
-      borderRadius: '10px', 
-      position: 'relative' }}>
-        <div style=
-        {{ width: filledSize/2 + 'px', 
-        height: '30px', 
-        backgroundColor: barColor(filledSize), 
-        borderRadius: '10px' }} />
-        <div style=
-        {{ position: 'absolute', 
-        top: 0, 
-        left: sectionSize + 'px', 
-        width: '2px', 
-        height: '30px', 
-        backgroundColor: 'black' }} />
-        <div style=
-        {{ position: 'absolute', 
-        top: 0, 
-        left: sectionSize * 2 + 'px', 
-        width: '2px', 
-        height: '30px', 
-        backgroundColor: 'black' }} />
+    <div style={{ display: "flex", alignItems: "center" ,marginBottom:70}}>
+      <Typography sx={{ mr: 2 }}>{props.nname}</Typography>
+      <div
+        style={{
+          width: maxBarSize + "px",
+          height: "30px",
+          border: "2px solid black",
+          borderRadius: "10px",
+          position: "relative"
+        }}
+      >
+        <div
+          style={{
+            width: props.filledSize / 2 + "px",
+            height: "30px",
+            backgroundColor: barColor(props.filledSize),
+            borderRadius: "10px"
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: sectionSize + "px",
+            width: "3px",
+            height: "30px",
+            backgroundColor: "black"
+          }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: sectionSize * 2 + "px",
+            width: "3px",
+            height: "30px",
+            backgroundColor: "black"
+          }}
+        />
       </div>
-      <div>{filledSize}</div>
-    </>
+      <Typography sx={{ ml: 2 }}>
+        {props.filledSize}
+        {props.unit}
+      </Typography>
+    </div>
   );
 };
 

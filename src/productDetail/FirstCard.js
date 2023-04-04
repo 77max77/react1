@@ -1,6 +1,7 @@
 import Grid from '@mui/material/Grid';
 import CardMedia from '@mui/material/CardMedia';
 import * as React from 'react';
+import {useState} from 'react';
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -13,6 +14,9 @@ import {TextRating} from './TextRating'
 import OutlinedButtons from './Button'
 
 export default function FirstCard() {
+  const [product, setProduct] = useState(
+    { pimage:"https://questlife.co.kr/web/product/big/202107/f23dcb994e95fc8258874500da0313e2.png", pname: "product name", pfrom: "제조사", prating:3 }
+  );
     return (
         <Card sx={{mt:0,amt:10}}>
           <Box
@@ -27,18 +31,17 @@ export default function FirstCard() {
             <Grid item  sx={{mt:0,mb:5,mr:0}}>
               <CardMedia 
               sx={{ml:5, height: 400,width:200 }}
-              image="https://questlife.co.kr/web/product/big/202107/f23dcb994e95fc8258874500da0313e2.png"
-              //title=
+              image={product.pimage}
               />
             </Grid >
             <Card sx={{mt:8,mb:5}}>
             <Grid xs item  sx={{mt:3,ml:3,mr:10}}>
               <CardActions sx={{ml:1,mb:2}} >
-                <Link  size="large"  color="#78909c">제조사</Link>
+                <Link  size="large"  color="#78909c">{product.pfrom}</Link>
               </CardActions>
             <CardContent>
               <Typography variant="h3" sx={{mt:-4,fontSize: 30 }} color="text.secondary" gutterBottom>
-              product name
+              {product.pname}
               </Typography>
               <Grid container>
                 <Grid item >
@@ -55,6 +58,12 @@ export default function FirstCard() {
             <Grid xs item sx={{mt:0,ml:3}}>
               <Typography  variant="h3" component="div" sx={{ml:0,mr:5,mt:10,fontSize:30 }}   gutterBottom>
               최저가
+              </Typography>
+              <Typography  variant="h3" component="div" sx={{ml:0,mr:5,mt:5,fontSize:20 }}   gutterBottom>
+              ihub<span style={{ marginLeft: '270px' }}></span>가격 
+              </Typography>
+              <Typography  variant="h3" component="div" sx={{ml:0,mr:5,mt:2,fontSize:20}}   gutterBottom>
+              naver<span style={{ marginLeft: '260px' }}></span>가격 
               </Typography>
               </Grid>
               <Grid item sx={{mt:0}}>
