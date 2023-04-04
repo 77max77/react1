@@ -12,7 +12,7 @@ export default function SixCard() {
   ]);
   return (
     <Card sx={{ minWidth: 275, mb: 5 }}>
-      <Container
+      <Container 
         fixed
         sx={{
           width: "100%",
@@ -24,7 +24,7 @@ export default function SixCard() {
         }}
       >
         {vitamins.map((vitamin) => (
-          <Chart
+          <Chart 
             key={vitamin.nname}
             filledSize={vitamin.filledSize}
             unit={vitamin.unit}

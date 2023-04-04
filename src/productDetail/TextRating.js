@@ -16,10 +16,9 @@ const labels = {
     5: 'Excellent+',
   };
   
-  export function TextRating() {
+  export function TextRating(props) {
     //점수
     //const value = {prodct.score};
-    const value = 3
     return (
       <Box
         sx={{
@@ -30,12 +29,12 @@ const labels = {
       >
         <Rating
           name="text-feedback"
-          value={value}
+          value={props.rate}
           readOnly
           precision={0.5}
           emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
         />
-        <Box sx={{ ml: 2 }}>{labels[value]}</Box>
+        <Box sx={{ ml: 2 }}>{labels[props.rate]}</Box>
       </Box>
     );
   }

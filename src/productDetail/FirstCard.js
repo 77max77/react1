@@ -15,8 +15,12 @@ import OutlinedButtons from './Button'
 
 export default function FirstCard() {
   const [product, setProduct] = useState(
-    { pimage:"https://questlife.co.kr/web/product/big/202107/f23dcb994e95fc8258874500da0313e2.png", pname: "product name", pfrom: "제조사", prating:3 }
+    { pimage:"https://questlife.co.kr/web/product/big/202107/f23dcb994e95fc8258874500da0313e2.png", pname: "product name", pfrom: "제조사", prating:3.5 }
   );
+  const [priceInfo, setpriceInfo] = useState([
+    { sname: "ihub", price: 10000},
+    { sname: "naver", price: 12500}
+  ]);
     return (
         <Card sx={{mt:0,amt:10}}>
           <Box
@@ -45,7 +49,7 @@ export default function FirstCard() {
               </Typography>
               <Grid container>
                 <Grid item >
-                <TextRating ></TextRating>
+                <TextRating rate={product.prating} ></TextRating>
               </Grid>
               <Grid item sx={{mb:10}} >
                 <Link color="#7e57c2">리뷰</Link>
@@ -59,18 +63,29 @@ export default function FirstCard() {
               <Typography  variant="h3" component="div" sx={{ml:0,mr:5,mt:10,fontSize:30 }}   gutterBottom>
               최저가
               </Typography>
-              <Typography  variant="h3" component="div" sx={{ml:0,mr:5,mt:5,fontSize:20 }}   gutterBottom>
-              ihub<span style={{ marginLeft: '270px' }}></span>가격 
+              {priceInfo.map((priceinfo) => (
+              <Typography
+                variant="h3"
+                component="div"
+                sx={{ ml: 0, mr: 5, mt: 5, fontSize: 20 }}
+                key={priceinfo.sname}
+                sname={priceinfo.sname}
+                price={priceinfo.price}
+                gutterBottom
+              >
+                {priceinfo.sname}
+                <span style={{ marginLeft: "110px" }}></span>
+                {priceinfo.price}원
               </Typography>
-              <Typography  variant="h3" component="div" sx={{ml:0,mr:5,mt:2,fontSize:20}}   gutterBottom>
-              naver<span style={{ marginLeft: '260px' }}></span>가격 
-              </Typography>
+              ))}
               </Grid>
               <Grid item sx={{mt:0}}>
-              <Link variant="h3" component="div" sx={{ml:0,mr:5,mt:10,fontSize:30 }}   gutterBottom>xxxx원</Link>
+              <Link variant="h3" component="div" sx={{ml:0,mr:5,mt:10,fontSize:30 }}   gutterBottom>10000원</Link>
               </Grid>
           </Grid>
         </Card>
        
     );
   }
+
+ 

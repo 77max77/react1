@@ -23,7 +23,7 @@ const Chart = (props) => {
   return (
     <div style={{ display: "flex", alignItems: "center" ,marginBottom:70}}>
       <Typography sx={{ mr: 2 }}>{props.nname}</Typography>
-      <div
+      <div 
         style={{
           width: maxBarSize + "px",
           height: "30px",
@@ -32,7 +32,7 @@ const Chart = (props) => {
           position: "relative"
         }}
       >
-        <div
+        <div 
           style={{
             width: props.filledSize / 2 + "px",
             height: "30px",
@@ -40,7 +40,7 @@ const Chart = (props) => {
             borderRadius: "10px"
           }}
         />
-        <div
+        <div 
           style={{
             position: "absolute",
             top: 0,
@@ -50,7 +50,7 @@ const Chart = (props) => {
             backgroundColor: "black"
           }}
         />
-        <div
+        <div 
           style={{
             position: "absolute",
             top: 0,
@@ -60,7 +60,7 @@ const Chart = (props) => {
             backgroundColor: "black"
           }}
         />
-      </div>
+      </div> 
       <Typography sx={{ ml: 2 }}>
         {props.filledSize}
         {props.unit}
