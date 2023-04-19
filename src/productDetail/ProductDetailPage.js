@@ -10,13 +10,17 @@ import AlignItemsList from './ReviewList'
 //import ForthCard from './ForthCard'
 import FifthCard from './FifthCard'
 import SixCard from "./SixCard";
-
+import {useRef } from 'react';
 export default function ProductDetail() {
-  
+  const bottomContainerRef = useRef(null);
+
+  const handleReviewLinkClick = () => {
+    window.location.href = "";
+  };
   return (
     <div>
       <Container fixed sx={{mt:5}}>
-        <Link fixed size="large"  color="#78909c">제조사</Link>
+        <Link fixed size="large"  color="#78909c" onClick={handleReviewLinkClick}>제조사</Link>
         -
         <Link fixed size="large"  color="#78909c">product name</Link>
         <FirstCard></FirstCard>
