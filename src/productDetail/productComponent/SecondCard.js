@@ -4,11 +4,8 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import {BasicChips} from './BasicChips'
 import {useState} from 'react'
-export default function SecondCard() {
-  const [affects, setmAffect] = useState(
-    ["피로해소","눈떨림"]
-   
-  );
+export default function SecondCard(props) {
+ 
     return (
       <Card sx={{ minWidth: 275, }}> 
         <Typography variant="h3" component="div" sx={{ml:3,mt:3,fontSize: 20 }}  gutterBottom>
@@ -16,7 +13,7 @@ export default function SecondCard() {
         </Typography>
         <CardContent sx={{display:"flex",flexDirection:"row"}}>
          
-        {affects.map((item,idx) => (
+        {props.affects.map((item,idx) => (
           <BasicChips 
             affect={item}
           />

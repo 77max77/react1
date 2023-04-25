@@ -9,8 +9,7 @@ import {useState} from 'react'
 import {BasicChips2} from './BasicChips'
 //import Divider from '@mui/material/Divider';
 
-export default function ThirdCard() {
-  const [times,setTimes]= useState({ti:1})
+export default function ThirdCard(props) {
     return (
       <Card sx={{ minWidth: 275 }}>
         <CardContent>
@@ -22,7 +21,7 @@ export default function ThirdCard() {
             </Grid>
             
             <Grid item sx={{ml:3,mt:3,fontSize: 20 }}>
-              <BasicChips2 times={times.ti} ></BasicChips2>
+              <BasicChips2 times={props.times.ti} ></BasicChips2>
             </Grid>
           </Grid>
         </CardContent>
