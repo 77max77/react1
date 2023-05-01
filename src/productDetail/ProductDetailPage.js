@@ -1,4 +1,4 @@
-import "/main/school/react-project/react1/src/style.css";
+
 import Container from '@mui/material/Container';
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
@@ -20,9 +20,9 @@ export default function ProductDetail() {
       pfrom: "제조사", 
       prating:3.5, 
       sname1: "ihub", 
-      price1: 10000,
+      price1: "10,000",
       sname2: "naver", 
-      price2: 12500}
+      price2: "12,500"}
   );
 
   const [affects, setmAffect] = useState(
@@ -31,11 +31,11 @@ export default function ProductDetail() {
   );
   
   const [vitamins, setVitamins] = useState([
-    { nname: "비타민A", unit: "mg", filledSize: 400 },
-    { nname: "비타민B", unit: "g", filledSize: 700 },
-    { nname: "비타민C", unit: "g", filledSize: 200 },
-    { nname: "비타민D", unit: "ml", filledSize: 500 },
-    { nname: "비타민E", unit: "g", filledSize: 600 }
+    { nname: "비타민A", unit: "mg", filledSize: 400 ,standard:500},
+    { nname: "비타민B", unit: "g", filledSize: 700,standard:700 },
+    { nname: "비타민C", unit: "g", filledSize: 300 ,standard:600},
+    { nname: "비타민D", unit: "ml", filledSize: 1000 ,standard:400},
+    { nname: "비타민E", unit: "g", filledSize: 8.5,standard:2 }
   ]);
   
   const [times,setTimes]= useState({ti:2})
@@ -79,9 +79,9 @@ export default function ProductDetail() {
   return (
     <div>
       <Container fixed sx={{mt:5}}>
-        <Link fixed size="large"  color="#78909c" onClick={handleReviewLinkClick}>{productInfo.pfrom}</Link>
+        <Link fixed size="large"  color="#78909c">{productInfo.pfrom}</Link>
         -
-        <Link fixed size="large"  color="#78909c">{productInfo.pname}</Link>
+        <Link fixed size="large"  color="#78909c" onClick={handleReviewLinkClick}>{productInfo.pname}</Link>
         <FirstCard 
           pimage ={productInfo.pimage}
           pname ={productInfo.pname}

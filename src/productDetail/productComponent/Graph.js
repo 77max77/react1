@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import Typography from '@mui/material/Typography';
+
 const Chart = (props) => {
   const maxBarSize = 500;
   const sectionSize = maxBarSize / 3;
   
-  function barColor(value) {
-    if (value > 500) {
+  function barColor(value1, value2) {
+    if (value1 > value2) {
       return '#33adff';
-    } else if (value < 500) {
+    } else if (value1 < value2) {
       return '#ff1a1a';
     } else {
       return '#29a329';
@@ -19,9 +20,18 @@ const Chart = (props) => {
       props.setFilledSize(maxBarSize);
     });
   }, []);
+
+  let width = props.filledSize / 3;
+  if (props.filledSize <= 10) {
+    width *= 100;
+  } else if (props.filledSize <= 100) {
+    width *= 10;
+  }else if (props.filledSize >= 1000) {
+    width /= 2;
+  }
   
   return (
-    <div style={{ display: "flex", alignItems: "center" ,marginBottom:70}}>
+    <div style={{ display: "flex", alignItems: "center" ,marginBottom:50,marginRight:50,marginLeft:50}}>
       <Typography sx={{ mr: 2 }}>{props.nname}</Typography>
       <div 
         style={{
@@ -34,9 +44,9 @@ const Chart = (props) => {
       >
         <div 
           style={{
-            width: props.filledSize / 2 + "px",
+            width: `${width}px`,
             height: "30px",
-            backgroundColor: barColor(props.filledSize),
+            backgroundColor: barColor(props.filledSize, props.standard),
             borderRadius: "10px"
           }}
         />
@@ -60,11 +70,13 @@ const Chart = (props) => {
             backgroundColor: "black"
           }}
         />
+        <Typography
+          sx={{ position: 'absolute', bottom: '-30px', left: `${width}px` }}
+        >
+          {props.filledSize}
+          {props.unit}
+        </Typography>
       </div> 
-      <Typography sx={{ ml: 2 }}>
-        {props.filledSize}
-        {props.unit}
-      </Typography>
     </div>
   );
 };

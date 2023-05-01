@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import {useState} from 'react'
 export default function SixCard(props) {
   return (
-    <Card sx={{ minWidth: 275, mb: 5 }}>
+    <Card sx={{mb: 5}}>
       <Container 
         fixed
         sx={{
@@ -20,6 +20,7 @@ export default function SixCard(props) {
           <Chart 
             key={vitamin.nname}
             filledSize={vitamin.filledSize}
+            standard={vitamin.standard}
             unit={vitamin.unit}
             nname={vitamin.nname}
             setFilledSize={vitamin.filledSize}

@@ -6,9 +6,9 @@ import InputWithIcon from './WriteReview'
 //import BasicRating from './Basicrating'
 export default function FifthCard() {
     return (
-      <Card sx={{ minWidth: 275, mb:5 }}>
+      <Card sx={{mb:5 }}>
         <Container fixed  sx={{
-            width: 800,
+            width: '100%',
             display: 'flex',
             alignItems: 'center',mb:2,mt:2
           }}>
