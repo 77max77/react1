@@ -1,3 +1,4 @@
+/*
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
@@ -24,45 +25,39 @@ const labels = {
   
 
 export default function ReviewCard(props) {
-    return (
-      <Card sx={{ml:5,mr:5,mb:5,mt:5}}>
-          <ListItem alignItems="flex-start">
-            <ListItemAvatar>
-              <Avatar alt={props.usname} src="/static/images/avatar/1.jpg" />
-            </ListItemAvatar>
-            <ListItemText
-              primary={props.usname}
-              secondary={
-                <React.Fragment>
-                  
-                  <Typography
-                    sx={{ display: 'inline' }}
-                    component="span"
-                    variant="body2"
-                    color="text.primary"
-                  >
-                  <Box
-                      sx={{
-                        width: 200,
-                        display: 'flex',
-                        alignItems: 'center',
-                      }}
-                    >
-                      <Rating
-                        name="text-feedback"
-                        value={props.rscore}
-                        readOnly
-                        precision={0.5}
-                        emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-                      />
-                      <Box sx={{ ml: 2 }}>{labels[props.rscore]}</Box>
-                    </Box>
-                  </Typography>
-                {props.text}
-                </React.Fragment>
-              }
-            />
-          </ListItem>
-      </Card>
-    );
-  }
+  return (
+   
+    <Card component="div" sx={{ ml: 5, mr: 5, mb: 5, mt: 5 }}>
+      <ListItem component="div" alignItems="flex-start">
+        <ListItemAvatar>
+          <Avatar alt={props.usname} src="/static/images/avatar/1.jpg" />
+        </ListItemAvatar>
+        <ListItemText
+          component="div"
+          primary={props.usname}
+          secondary={
+           <>
+              <Box component="div" sx={{ display: 'flex', alignItems: 'center' }}>
+                <Rating
+                  component="div"
+                  name="text-feedback"
+                  value={props.rscore}
+                  readOnly
+                  precision={0.5}
+                  emptyIcon={
+                    <StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />
+                  }
+                />
+                <Box component="div" sx={{ ml: 2 }}>
+                  {labels[props.rscore]}
+                </Box>
+              </Box>
+              {props.text}
+          </>
+          }
+        />
+      </ListItem>
+    </Card>
+  );
+}
+*/

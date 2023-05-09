@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 
 
-export default function FifthCard() { 
+export default function WriteReview() { 
   const [title, setTitle] = useState(''); 
   const [review, setReview] = useState(''); 
   const [rating, setRating] = useState(0);
@@ -47,7 +47,7 @@ export default function FifthCard() {
     >
       <form onSubmit={handleSubmit}>
         <Box component="fieldset" borderColor="transparent">
-          <Typography component="legend">별점:</Typography>
+          <Typography component="p">별점:</Typography>
           <Rating
             name="rating"
             value={rating}

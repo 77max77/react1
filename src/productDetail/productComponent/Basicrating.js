@@ -7,12 +7,12 @@ export default function BasicRating() {
   const [value, setValue] = React.useState(2);
 
   return (
-    <Box
+    <Box component="div"
       sx={{
         '& > legend': { mt: 2 },
       }}
     >
-      <Typography component="legend">별점</Typography>
+      <Typography component="p">별점</Typography>
       <Rating
         name="simple-controlled"
         value={value}

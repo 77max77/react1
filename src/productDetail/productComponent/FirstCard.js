@@ -14,8 +14,9 @@ import OutlinedButtons from './Button'
 
 export default function FirstCard(props) {
     return (
-        <Card sx={{mt:0,amt:10}}>
+        <Card component="div" sx={{mt:0,amt:10}}>
           <Box
+            component="div"
             display="flex"
             justifyContent="flex-end"
             alignItems="flex-end"
@@ -30,13 +31,13 @@ export default function FirstCard(props) {
               image={props.pimage}
               />
             </Grid >
-            <Card sx={{mt:8,mb:5}}>
+            <Card component="div" sx={{mt:8,mb:5}}>
             <Grid xs item  sx={{mt:3,ml:3,mr:10}}>
               <CardActions sx={{ml:1,mb:2}} >
                 <Link  size="large"  color="#78909c">{props.pfrom}</Link>
               </CardActions>
             <CardContent>
-              <Typography variant="h3" sx={{mt:-4,fontSize: 30 }} color="text.secondary" gutterBottom>
+              <Typography component="div" variant="h3" sx={{mt:-4,fontSize: 30 }} color="text.secondary" gutterBottom>
               {props.pname}
               </Typography>
               <Grid container>
@@ -52,39 +53,47 @@ export default function FirstCard(props) {
           </Grid>
           </Card>
             <Grid xs item sx={{mt:0,ml:3}}>
-              <Typography  variant="h3" component="div" sx={{ml:0,mr:5,mt:10,fontSize:30 }}   gutterBottom>
+              <Typography  component="div" variant="h3"  sx={{ml:0,mr:5,mt:10,fontSize:30 }}   gutterBottom>
               최저가
               </Typography>
               
               <Typography
-                variant="h3"
                 component="div"
-                sx={{ ml: 0, mr: 5, mt: 5, fontSize: 20 }}
+                variant="h3"
+                sx={{ ml: 0, mr: 5, mt: 5, mb:5, fontSize: 20 }}
                 key={props.sname1}
                 sname={props.sname1}
                 price={props.price1}
                 gutterBottom
               >
                 {props.sname1}
-                <span style={{ marginLeft: "110px" }}></span>
+                <a href={props.plink1}>
+                <span style={{ marginLeft: "120px" }}></span>
                 {props.price1}원
+                </a>
               </Typography>
               <Typography
                 variant="h3"
                 component="div"
-                sx={{ ml: 0, mr: 5, mt: 5, fontSize: 20 }}
+                sx={{ ml: 0, mr: 5, mt: 5, mb:5, fontSize: 20 }}
                 key={props.sname2}
                 sname={props.sname2}
                 price={props.price2}
                 gutterBottom
               >
                 {props.sname2}
+                <a href={props.plink2}>
                 <span style={{ marginLeft: "110px" }}></span>
                 {props.price2}원
+                </a>
               </Typography>
               </Grid>
               <Grid item sx={{mt:0}}>
-              <Link variant="h3" component="div" sx={{ml:0,mr:5,mt:10,fontSize:30 }}gutterBottom>{props.lowPrice} 원</Link>
+              <a href={props.lowPrice_link}>
+  <Link variant="h3" component="div" sx={{ml:0,mr:5,mt:10,fontSize:30 }}gutterBottom>
+    {props.lowPrice} 원
+  </Link>
+</a>
               </Grid>
           </Grid>
         </Card>

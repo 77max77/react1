@@ -54,7 +54,9 @@ function ProductForm() {
       //<TopNavigattionBar/>
       //<Routes>
         //<Route path="/" element={<ProductDetail products={products}setProducts={products}/>}
+       
         <ProductDetail></ProductDetail>
+     
       //</Routes>
     //</BrowserRouter>
   );
