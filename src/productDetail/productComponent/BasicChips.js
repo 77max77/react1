@@ -19,3 +19,11 @@ export function BasicChips2(props) {
       </Stack>
     );
   }
+
+  export function BasicChips3(props) {
+    return (
+      <Stack sx={{ml:3}} direction="row" spacing={1}>
+        <Chip label={props.info}  />
+      </Stack>
+    );
+  }

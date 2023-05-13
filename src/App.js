@@ -2,6 +2,7 @@ import "./style.css";
 //import {BrowserRouter,Route,Routes} from "react-router-dom"
 //import {useState} from "react"
 import ProductDetail from './productDetail/ProductDetailPage'
+import UserInformationChangePage from './userSetting/userSettingPage'
 //import axios from "axios"
 export default function App() {
   /*
@@ -50,14 +51,11 @@ function ProductForm() {
     */
 
   return (
-    //<BrowserRouter>
-      //<TopNavigattionBar/>
-      //<Routes>
-        //<Route path="/" element={<ProductDetail products={products}setProducts={products}/>}
+    <>
        
-        <ProductDetail></ProductDetail>
-     
-      //</Routes>
-    //</BrowserRouter>
+        {//<ProductDetail></ProductDetail>
+        }
+      <UserInformationChangePage/>
+   </>
   );
 }

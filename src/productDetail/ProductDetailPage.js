@@ -173,7 +173,8 @@ export default function ProductDetail(props) {
       <Typography  sx={{mt:10,mb:5,fontSize:25}} component="div">
         제품 리뷰
       </Typography>
-      <AlignItemsList reviews={reviews} />
+      {//<AlignItemsList reviews={reviews} />
+      }
       <Typography  sx={{mt:10,mb:5,fontSize:25}} component="div">
         리뷰 작성
     </Typography>
