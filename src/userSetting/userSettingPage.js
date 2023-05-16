@@ -14,18 +14,12 @@ const UserInformationChangePage = () => {
     const [isFormComplete, setIsFormComplete] = useState(false);
 
   
-    const handleIdChange = (event) => {
-      setId(event.target.value);
-    };
-  
+
     const handleEmailChange = (event) => {
       setEmail(event.target.value);
     };
   
-    const handleUsernameChange = (event) => {
-      setUsername(event.target.value);
-    };
-  
+   
     const handleTallChange = (event) => {
       setTall(event.target.value);
     };
@@ -33,10 +27,7 @@ const UserInformationChangePage = () => {
     const handleWeightChange = (event) => {
       setWeight(event.target.value);
     };
-  
-    const handleAgeChange = (event) => {
-      setAge(event.target.value);
-    };
+
   
     const handleInfoChange = () => {
       // Logic to update user information
@@ -65,7 +56,7 @@ const UserInformationChangePage = () => {
   const [chainge, setChainge]= useState([])
   useEffect(() => {
     // Check if all fields are filled
-    setIsFormComplete(!!id && !!email && !!username && !!tall && !!weight && !!age);
+    setIsFormComplete(!!email || !!tall || !!weight);
   }, [id, email, username, tall, weight, age]);
 
     /*  
@@ -109,34 +100,28 @@ const UserInformationChangePage = () => {
   return (
     
       <Grid container spacing={5}  >
-        <Grid item xs={12} sm={6}>
+        <Grid item xs={12} sm={8}>
           <Paper style={{ padding: '10px' }}>
             <Typography  variant="h6"><SettingsApplicationsIcon sx={{fontSize:50}}/>사용자 설정</Typography>
             <Grid container spacing={2} style={{ marginTop: '10px' }}>
               <Grid item xs={1} >
                 <Typography>아이디</Typography>
               </Grid>
-              <Grid item xs={3} >
+              <Grid item xs={5} >
                 <BasicChips3 info={userInfo.id}/>
               </Grid>
-              <Grid item xs={8}>
-                <TextField
-                  label="ID"
-                  fullWidth
-                  value={id}
-                  onChange={handleIdChange}
-               
-                />
+              <Grid item xs={5}>
+                
               </Grid>
             </Grid>
             <Grid container spacing={2} style={{ marginTop: '10px' }}>
               <Grid item xs={1}>
                 <Typography>이메일</Typography>
               </Grid>
-              <Grid item xs={3} >
+              <Grid item xs={5} >
               <BasicChips3 info={userInfo.email}/>
               </Grid>
-              <Grid item xs={8}>
+              <Grid item xs={5}>
                 <TextField
                   label="Email"
                   fullWidth
@@ -150,27 +135,21 @@ const UserInformationChangePage = () => {
               <Grid item xs={1}>
                 <Typography>닉네임</Typography>
               </Grid>
-              <Grid item xs={3} >
+              <Grid item xs={5} >
               <BasicChips3 info={userInfo.username}/>
               </Grid>
-              <Grid item xs={8}>
-                <TextField
-                  label="Username"
-                  fullWidth
-                  value={username}
-                  onChange={handleUsernameChange}
+              <Grid item xs={5}>
                
-                />
               </Grid>
             </Grid>
             <Grid container spacing={2} style={{ marginTop: '10px' }}>
               <Grid item xs={1} >
                 <Typography>키</Typography>
               </Grid>
-              <Grid item xs={3} >
+              <Grid item xs={5} >
               <BasicChips3 info={userInfo.tall}/>
               </Grid>
-              <Grid item xs={8}>
+              <Grid item xs={5}>
                 <TextField
                   label="Tall"
                   fullWidth
@@ -184,10 +163,10 @@ const UserInformationChangePage = () => {
               <Grid item xs={1}>
                 <Typography>몸무게</Typography>
               </Grid>
-              <Grid item xs={3} >
+              <Grid item xs={5} >
               <BasicChips3 info={userInfo.weight}/>
               </Grid>
-              <Grid item xs={8}>
+              <Grid item xs={5}>
                 <TextField
                   label="Weight"
                   fullWidth
@@ -201,17 +180,11 @@ const UserInformationChangePage = () => {
               <Grid item xs={1}>
                 <Typography>나이</Typography>
               </Grid>
-              <Grid item xs={3} >
+              <Grid item xs={5} >
               <BasicChips3 info={userInfo.age}/>
               </Grid>
-              <Grid item xs={8}>
-                <TextField
-                  label="Age"
-                  fullWidth
-                  value={age}
-                  onChange={handleAgeChange}
+              <Grid item xs={5}>
                 
-                />
               </Grid>
             </Grid>
             <Button
